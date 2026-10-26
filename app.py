@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-COLOR = "royalblue"
+COLOR = "green"
 VERSION = "Version 1"
 
 
