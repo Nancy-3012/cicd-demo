@@ -2,10 +2,21 @@ from flask import Flask
 
 app = Flask(__name__)
 
+COLOR = "royalblue"
+VERSION = "Version 1"
+
 
 @app.route("/")
 def home():
-    return "Hello from my CI/CD pipeline! Version 1"
+    return f"""
+    <html>
+      <body style="background-color:{COLOR}; color:white; font-family:Arial;
+                   text-align:center; padding-top:120px;">
+        <h1>Hello from my CI/CD pipeline!</h1>
+        <h2>{VERSION}</h2>
+      </body>
+    </html>
+    """
 
 
 @app.route("/health")
